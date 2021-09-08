@@ -1,0 +1,19 @@
+type Student {
+  _id: String!
+  name: String!
+  nim: String!
+}
+
+type Query {
+  student(_id: String!): Student!
+  students: [Student!]!
+}
+
+input NewStudent {
+  name: String!
+  nim: String!
+}
+
+type Mutation {
+  createStudent(input: NewStudent): Student!
+}
